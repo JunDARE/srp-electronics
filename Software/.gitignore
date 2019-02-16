@@ -1,0 +1,9 @@
+*.elf
+__pycache__
+*.pyc
+*.s
+*.hex
+*.zip
+*.vs/
+src/Debug/
+src/Release/
