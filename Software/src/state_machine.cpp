@@ -70,8 +70,8 @@ void update_state_machine() {
 
             // check if the battery is empty
             // also, check if there's a squib connected if we're configured for one.
-            if (get_battery_value() <= eeprom_read_safe(&battery_empty_limit)) ||
-			((!eeprom_read_safe(&use_servo) && !is_squib_connected())) {
+            if ((get_battery_value() <= eeprom_read_safe(&battery_empty_limit)) ||
+			((!eeprom_read_safe(&use_servo) && !is_squib_connected()))) {
 
                 flight_state = ERROR;
                 break;
